@@ -1,0 +1,56 @@
+SELECT basis
+    Question 1
+        SELECT population FROM world
+        WHERE name = 'Germany'
+    Question 2
+        SELECT name, population FROM world
+        WHERE name IN ('Sweden','Norway','Denmark')
+    Question 3
+        SELECT name, area FROM world
+        WHERE area BETWEEN 200000 AND 250000
+
+SELECT from world
+    Question 1
+        SELECT name, continent, population FROM world
+    Question 2
+        SELECT name FROM world
+        WHERE population >= 200000000
+    Question 3
+        Select name,gdp/population AS 'per capita GDP' FROM world
+        WHERE population >= 200000000
+    Question 4
+        Select name, population/1000000 AS 'pop per million'FROM world
+        Where continent = 'South America'
+    Question 5
+        select name,population from world
+        where name in ('France','Germany','Italy')
+    Question 6
+        SELECT name FROM world
+        WHERE name LIKE '%United%';
+    Question 7
+        select name,population,area from world
+        Where area >3000000 OR population >250000000
+    Question 8
+        select name,population,area from world
+        Where area >3000000 XOR population >250000000
+    Question 9
+        select name,Round(population/1000000,2) AS Pop, ROUND(GDP/1000000000,2) AS GDP  From world
+        WHERE continent ='South America'
+    Question 10
+        select name, ROUND(GDP/population,-3) As per_capita_GDP from world
+        WHERE GDP>1000000000000
+    Question 11
+        SELECT name, capital FROM world
+        WHERE LENGTH(name) = LENGTH(capital)
+    Question 12
+        SELECT name, capital FROM world
+        WHERE name <> capital AND Left(name,1) = Left(capital,1)
+    Question 13
+        SELECT name FROM world
+        WHERE name LIKE ('%a%') 
+        AND name LIKE ('%e%')
+        AND name LIKE ('%i%') 
+        AND name LIKE ('%o%') 
+        AND name LIKE ('%u%') 
+        AND name NOT LIKE ('% %') 
+
